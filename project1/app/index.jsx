@@ -1,25 +1,38 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import { Link } from 'expo-router'
+import { StyleSheet } from 'react-native'
 
-import LogoWhite from '../assets/img/logo-white.png'
+import ThemedView from '../components/ThemedView'
+import ThemedCard from '../components/ThemedCard'
+import ThemedLogo from '../components/ThemedLogo'
+import ThemedText from '../components/ThemedText'
+import ThemedLink from '../components/ThemedLink'
+import Spacer from "../components/Spacer"
 
 const Home = () => {
     return (
-        <View style={styles.container}>
-            <Image source={LogoWhite} style={styles.img} />
+        <ThemedView style={styles.container}>
+            <ThemedLogo />
+            <Spacer />
 
             {/* { color: 'purple' } take priority over styles.title if another color in title */}
-            <Text style={[styles.title, { color: 'purple' }]}>Home</Text>
-            <Text style={{ marginTop: 10, marginBottom: 30 }}>Some Descrition</Text>
+            <ThemedText style={styles.title} title>
+                Home
+            </ThemedText>
+            <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
+                Some Descrition
+            </ThemedText>
 
-            <View style={styles.card}>
-                <Text>Hello, this is a card</Text>
-            </View>
+            <ThemedCard>
+                <ThemedText>Hello, this is a card</ThemedText>
+            </ThemedCard>
 
-            <Link style={styles.linkBtn} href='/about'>About</Link>
+            <ThemedLink href="/about" style={{ marginTop: 20 }}>
+                <ThemedText>About Page</ThemedText>
+            </ThemedLink>
 
-            <Link style={styles.linkBtn} href='/contact'>Contact</Link>
-        </View>
+            <ThemedLink href="/contact" style={{ marginTop: 20 }}>
+                <ThemedText>Contact Page</ThemedText>
+            </ThemedLink>
+        </ThemedView>
     )
 }
 
