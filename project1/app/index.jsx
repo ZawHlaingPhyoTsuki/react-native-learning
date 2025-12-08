@@ -24,13 +24,21 @@ const Home = () => {
             <ThemedCard>
                 <ThemedText>Hello, this is a card</ThemedText>
             </ThemedCard>
-
+{/* 
             <ThemedLink href="/about" style={{ marginTop: 20 }}>
                 <ThemedText>About Page</ThemedText>
             </ThemedLink>
 
             <ThemedLink href="/contact" style={{ marginTop: 20 }}>
                 <ThemedText>Contact Page</ThemedText>
+            </ThemedLink> */}
+
+            <ThemedLink href="/login" style={{ marginTop: 20 }}>
+                <ThemedText>Login Page</ThemedText>
+            </ThemedLink>
+
+            <ThemedLink href="/register" style={{ marginTop: 20 }}>
+                <ThemedText>Register Page</ThemedText>
             </ThemedLink>
         </ThemedView>
     )
